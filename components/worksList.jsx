@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Image from 'next/image';
 import Link from 'next/link'
 import styles from './worksList.module.css';
 
@@ -69,15 +68,7 @@ const WorksList = () => {
                         <li key={item.id} className={styles.item}>
                             <Link href="https://www.naver.com/">
                                 <a className={styles.imgContainer} target="_blank" rel="noopener noreferrer">
-                                    <div className={styles.photo}>
-                                        <Image 
-                                            src={item.imgURL}
-                                            alt="portfolio"
-                                            layout="responsive"
-                                            width={25}
-                                            height={14}
-                                        />
-                                    </div>
+                                    <img className={styles.photo} src={item.imgURL} alr="portfolio" />
                                 </a>
                             </Link>
                             <h2 className={styles.name}>{item.name}</h2>

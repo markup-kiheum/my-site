@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
 import styles from './abouts.module.css';
-import Image from 'next/image'
 import profileData from '../src/api/profile';
 
 const About = () => {
     const {title, listTitle, profileTitle, profileList, description} = profileData || {};
+    const imgURL = "/assets/my-photo.jpg";
     return (
         <section className={styles.about}>
             <h1 className={styles.title}>{title}</h1>
             <div className={styles.container}>
-                <div className={styles.photo}>
-                    <Image
-                        src={`/assets/my-photo.jpg`}
-                        alt="Kiheum Photo"
-                        layout="responsive"
-                        width={1}
-                        height={1}
-                    />
-                </div>
+                <img className={styles.photo} src={imgURL} alt="Kiheum Photo" />
                 <div className={styles.info}>
                     <p className={styles.text}>{description}</p>
                     <ul className={styles.items}>
