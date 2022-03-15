@@ -4,7 +4,7 @@ const nextConfig = {
 }
 const withImages = require("next-images");
 
-module.exports = [
+const plugin = [
   {
     nextConfig
   },
@@ -12,3 +12,5 @@ module.exports = [
     withImages
   },
 ]
+
+module.exports = plugin;
