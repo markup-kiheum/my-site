@@ -1,0 +1,151 @@
+.about {
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.photo {
+  display: block;
+  width: 12rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  padding-left: 4rem;
+}
+
+.title {
+  padding: 0 2rem 3rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 2.4rem;
+  font-family: "NotoSansKR-Bold";
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0.2rem;
+}
+
+.item {
+  padding-bottom: 2rem;
+}
+
+.itemTitle {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "NotoSansKR-Bold";
+  font-size: 1.2rem;
+}
+
+.itemTitle:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-top: -0.4rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.profileContainer {
+  display: flex;
+}
+
+.profileTitle,
+.profileText {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.profileTitle {
+  flex-basis: 25%;
+}
+
+.profileText {
+  flex-basis: 75%;
+  word-break: break-all;
+}
+
+@media screen and (max-width: 48rem) {
+  .container {
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .photo {
+    padding-bottom: 2rem;
+  }
+
+  .info {
+    padding-left: 0;
+  }
+
+  .itemTitle {
+    padding-left: 1.2rem;
+  }
+
+  .itemTitle:before {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-top: -0.3rem;
+  }
+
+  .profileTitle {
+    flex-basis: 35%;
+  }
+
+  .profileText {
+    flex-basis: 65%;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .text {
+    font-size: 0.8rem;
+  }
+
+  .itemTitle {
+    font-size: 1rem;
+  }
+
+  .profileTitle,
+  .profileText {
+    font-size: 0.8rem;
+  }
+}

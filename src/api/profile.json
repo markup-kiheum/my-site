@@ -1,0 +1,21 @@
+{
+    "title" : "프론트 엔드 개발자를 향한 새로운 도전",
+    "description": "6년동안의 웹 퍼블리셔로 일하던 저에게 더 늦기 전에 도전하고 싶은 것이 생겼습니다.\n항상 생각만 하던 프론트 엔드 개발자에 대한 열망에 공부를 시작하게 되었습니다.\n그 동안 도태 되어있던 저에게 기술적으로도 웹의 전반적인 흐름에 대해서도 아주 유용한 시간들이었습니다.\n비록 많이 부족하지만 더욱 노력하고 발전할 수 있는 사람이 되겠습니다.",
+    "listTitle" : {
+        "name" : ["Profile", "Career", "Skills & Tools"]
+    },
+    "profileTitle" : {
+        "name": "Name",
+        "birth": "Birth",
+        "eMail": "E-mail",
+        "company": ["kakaoVX", "W-Planet", "MEPLZ", "View3"]
+    },
+    "profileList" : {
+        "name": "황기흠",
+        "birth": "1986. 05. 20",
+        "eMail": "markup.kiheum@gmail.com",
+        "companyDate": ["2018. 08 ~ 2021. 09", "2017. 07 ~ 2018. 03", "2016. 11 ~ 2017. 07", "2015. 08 ~ 2016. 08"],
+        "skills": "HTML, CSS, postCSS, Sass, jQuery &amp; javascript, ES6, react, next js, node js, npm, yarn\nCross Browsing, Web, Mobile Web, Responsive Web, Web Standard, Web Accessibility",
+        "tools": "zeplin, figma, Photoshop\nSVN, Git, Github"
+    }
+}

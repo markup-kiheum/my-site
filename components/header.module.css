@@ -1,0 +1,98 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  height: 3.75rem;
+  background-color: transparent;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  width: 3.75rem;
+  height: 100%;
+  font-size: 0;
+  text-indent: -9999px;
+  background: url("/assets/logo.png") no-repeat 50% 50%;
+  background-size: 100% auto;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  padding: 0 2rem;
+}
+
+.menu {
+  width: 16.6%;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-family: "NotoSansKR-Light";
+  font-size: 1.2rem;
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.foldButton {
+  display: none;
+}
+
+.foldNav {
+  display: none;
+}
+
+@media screen and (max-width: 48rem) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .foldButton {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 0 2rem;
+  }
+
+  .top,
+  .mid,
+  .bot {
+    display: block;
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #fff;
+  }
+
+  .top {
+    margin-top: 18px;
+  }
+
+  .mid {
+    margin-top: 6px;
+  }
+
+  .bot {
+    margin-top: 6px;
+  }
+
+  .top.active {
+  }
+
+  .mid.active {
+  }
+
+  .bot.active {
+  }
+}

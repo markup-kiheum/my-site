@@ -1,0 +1,57 @@
+.item {
+  flex-basis: 50%;
+  padding: 1rem;
+}
+
+.imgContainer {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.imgContainer:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in;
+}
+
+.imgContainer:hover:after {
+  display: block;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.name {
+  padding: 1rem 0 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "NotoSansKR-Bold";
+  font-size: 1.2rem;
+}
+
+.info {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 48rem) {
+  .item {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .name {
+    font-size: 1rem;
+  }
+
+  .info {
+    font-size: 0.8rem;
+  }
+}
