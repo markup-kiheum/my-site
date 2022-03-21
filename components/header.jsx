@@ -5,7 +5,7 @@ import styles from './header.module.css';
 const Header = ({ headerActiveIndex, onClickNavHandler }) => {
     const [clickActive, setClickActive] = useState(false);
     const [scrollPosition, setScrollPosition] = useState(false);
-    const navMenuList = ['About','Works','ToyProjects'];
+    const navMenuList = ["Home", "About", "Works", "ToyProjects"];
     const ACTIVE_CLASS = clickActive ? styles.active : "";
     const FIXED_CLASS = scrollPosition ? styles.fixed : "";
     const handleFold = event => {
@@ -22,6 +22,7 @@ const Header = ({ headerActiveIndex, onClickNavHandler }) => {
     //         }
     //     );
     // }
+
     useEffect(() => {
         const handleScroll = () => {
             setScrollPosition(window.scrollY || document.documentElement.scrollTop);
@@ -38,12 +39,10 @@ const Header = ({ headerActiveIndex, onClickNavHandler }) => {
         }
     }, [scrollPosition]);
 
-    const onClickNav = event => {
-        event.preventDefault();
-        // console.log(event.target.hash);
-        onClickNavHandler();
-        console.log(headerActiveIndex);
-        console.log(event.target);
+    function onClickNav(e){
+        const target = e.target.innerHTML;
+        const targetIndex = navMenuList.indexOf(target); 
+        onClickNavHandler(targetIndex);
     };
 
     const renderNavList = () => {
@@ -51,8 +50,7 @@ const Header = ({ headerActiveIndex, onClickNavHandler }) => {
             navMenuList.map((item, index) => {
                 const navActiveClass = (headerActiveIndex === index) ? styles.active : "";
                 return (
-                    /* <Link href={`#${item}`} key={`${index}`}><a onClick={onClickNav} className={`${styles.menu} ${navActiveClass}`}>{item}</a></Link> */
-                    <a key={`${index}`} onClick={onClickNav} className={`${styles.menu} ${navActiveClass}`}>{item}</a>
+                    <button key={`nav_${index}`} onClick={onClickNav} className={`${styles.menu} ${navActiveClass}`}>{item}</button>
                 )
             })
         )

@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Typed from 'react-typed';
 import styles from './main.module.css';
 

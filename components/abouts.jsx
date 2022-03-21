@@ -1,11 +1,14 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styles from './abouts.module.css';
 import profileData from '../src/api/profile';
 
-const About = () => {
+const About = ({offsetTopAbout}) => {
     const {title, listTitle, profileTitle, profileList, description} = profileData || {};
     const imgURL = "/assets/my-photo.jpg";
     const aboutSection = useRef(null);
+    useEffect(()=>{
+        offsetTopAbout(aboutSection.current.offsetTop);
+    }, []);
     return (
         <section ref={aboutSection} className={styles.about}>
             <h1 className={styles.title}>{title}</h1>

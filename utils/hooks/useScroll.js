@@ -8,9 +8,9 @@ export function useScroll(){
     }
 
     useEffect(() => {
-        window.addEventListener('scroll', listener);
+        window.addEventListener("scroll", listener);
         return () => {
-            window.removeEventListener('scroll',listener)
+            window.removeEventListener("scroll",listener)
         }
     });
 
