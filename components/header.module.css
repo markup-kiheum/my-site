@@ -45,6 +45,10 @@
   transition: all 0.25s ease-in-out;
 }
 
+.menu.active {
+  color: red;
+}
+
 .foldButton {
   display: none;
 }
@@ -67,6 +71,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 10;
     height: 100%;
     padding: 0 2rem;
   }
@@ -79,26 +84,50 @@
     height: 4px;
     border-radius: 2px;
     background-color: #fff;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
   .top {
-    margin-top: 18px;
+    position: absolute;
+    top: 20px;
   }
 
   .mid {
-    margin-top: 6px;
+    margin-top: 3px;
   }
 
   .bot {
-    margin-top: 6px;
+    position: absolute;
+    top: 40px;
+    height: 4px;
   }
 
   .top.active {
+    top: 50%;
+    transform: rotate(-45deg);
   }
 
   .mid.active {
+    opacity: 0;
   }
 
   .bot.active {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+
+  .foldNav.active {
+    display: block;
+    padding: 5rem 0 1.25rem;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .foldMenu {
+    display: block;
+    padding: 0.5rem;
+    color: #fff;
+    font-family: "NotoSansKR-Light";
+    font-size: 1.2rem;
+    text-align: center;
   }
 }

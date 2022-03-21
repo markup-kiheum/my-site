@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React, { useRef } from 'react';
 import styles from './abouts.module.css';
 import profileData from '../src/api/profile';
 
 const About = () => {
     const {title, listTitle, profileTitle, profileList, description} = profileData || {};
     const imgURL = "/assets/my-photo.jpg";
+    const aboutSection = useRef(null);
     return (
-        <section className={styles.about}>
+        <section ref={aboutSection} className={styles.about}>
             <h1 className={styles.title}>{title}</h1>
             <div className={styles.container}>
                 <img className={styles.photo} src={imgURL} alt="Kiheum Photo" />

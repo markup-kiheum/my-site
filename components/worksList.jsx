@@ -6,6 +6,7 @@ const WorksList = () => {
     const workInfo = [
         {
             "id" : 0,
+            "siteURL" : "http://www.kakaovx.com/",
             "imgURL" : "/assets/kakaoVX.jpg",
             "name" : "kakaoVX",
             "company" : "kakaoVX",
@@ -15,6 +16,7 @@ const WorksList = () => {
         },
         {
             "id" : 1,
+            "siteURL" : "https://www.friendsacademy.kr/",
             "imgURL" : "/assets/friendsacademy.jpg",
             "name" : "Friends Academy",
             "company": "kakaoVX",
@@ -24,6 +26,7 @@ const WorksList = () => {
         },
         {
             "id" : 2,
+            "siteURL" : "https://www.friendsscreen.kr/",
             "imgURL" : "/assets/friendsscreen.jpg",
             "name" : "Friends Screen",
             "company": "kakaoVX",
@@ -33,6 +36,7 @@ const WorksList = () => {
         },
         {
             "id" : 3,
+            "siteURL" : "https://c-so.co.kr/",
             "imgURL" : "/assets/wplanet.jpg",
             "name" : "시소펀딩",
             "company": "W-Planet",
@@ -42,6 +46,7 @@ const WorksList = () => {
         },
         {
             "id" : 4,
+            "siteURL" : "http://recruit.hyundai.com/",
             "imgURL" : "/assets/MEPLZ.jpg",
             "name" : "현대자동차 채용사이트",
             "company": "MEPLZ",
@@ -51,6 +56,7 @@ const WorksList = () => {
         },
         {
             "id" : 5,
+            "siteURL" : "http://www.jejumontrak.co.kr/",
             "imgURL" : "/assets/view3.jpg",
             "name" : "제주몬트락",
             "company": "View3",
@@ -66,7 +72,9 @@ const WorksList = () => {
                     const {name, company, siteInfo, type, skills} = item || {}
                     return(
                         <li key={item.id} className={styles.item}>
-                            <Link href="https://www.naver.com/">
+                            <Link href={{
+                                pathname: item.siteURL
+                            }}>
                                 <a className={styles.imgContainer} target="_blank" rel="noopener noreferrer">
                                     <img className={styles.photo} src={item.imgURL} alr="portfolio" />
                                 </a>
