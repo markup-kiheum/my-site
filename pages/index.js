@@ -5,10 +5,12 @@ import Works from '../components/works';
 import ToyProjects from '../components/toyProjects';
 import { useEffect, useState } from 'react';
 import { useScroll } from '../utils/hooks/useScroll';
+import { useResize } from '../utils/hooks/useResize';
 
 const Home = () => {
     const [headerActiveIndex, setHeaderActiveIndex] = useState(0);
     const {scrollY} = useScroll();
+    const {resize} = useResize();
     const [aboutOffsetTopValue, setAboutOffsetTopValue] = useState();
     const [worksOffsetTopValue, setWorksOffsetTopValue] = useState();
     const [toyProjectsOffsetTopValue, setToyProjectsOffsetTopValue] = useState();
@@ -35,7 +37,6 @@ const Home = () => {
     };
 
     useEffect(() => {
-        // offsetTopAbout.offsetTop
         if (scrollY < aboutOffsetTopValue) {
             setHeaderActiveIndex(0);
         } else if (scrollY >= aboutOffsetTopValue && scrollY < worksOffsetTopValue) {
@@ -45,7 +46,7 @@ const Home = () => {
         } else if (scrollY >= toyProjectsOffsetTopValue) {
             setHeaderActiveIndex(3);
         }
-    }, [scrollY]);
+    }, [scrollY, resize]);
 
     return (
         <>

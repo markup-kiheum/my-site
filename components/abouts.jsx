@@ -1,14 +1,16 @@
 import React, { useRef, useEffect } from 'react';
 import styles from './abouts.module.css';
 import profileData from '../src/api/profile';
+import { useResize } from '../utils/hooks/useResize';
 
 const About = ({offsetTopAbout}) => {
     const {title, listTitle, profileTitle, profileList, description} = profileData || {};
     const imgURL = "/assets/my-photo.jpg";
     const aboutSection = useRef(null);
+    const {resize} = useResize();
     useEffect(()=>{
         offsetTopAbout(aboutSection.current.offsetTop);
-    }, []);
+    }, [resize]);
     return (
         <section ref={aboutSection} className={styles.about}>
             <h1 className={styles.title}>{title}</h1>

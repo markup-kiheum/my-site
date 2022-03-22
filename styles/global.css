@@ -76,6 +76,9 @@ button {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   -webkit-text-size-adjust: none;
   background-color: #082032;
