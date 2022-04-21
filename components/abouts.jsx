@@ -5,10 +5,10 @@ import { useResize } from '../utils/hooks/useResize';
 
 const About = ({offsetTopAbout}) => {
     const {title, listTitle, profileTitle, profileList, description} = profileData || {};
-    const imgURL = "/assets/my-photo.jpg";
+    const imgURL = '/assets/my-photo.jpg';
     const aboutSection = useRef(null);
     const {resize} = useResize();
-    useEffect(()=>{
+    useEffect(() => {
         offsetTopAbout(aboutSection.current.offsetTop);
     }, [resize]);
     return (

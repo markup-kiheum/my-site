@@ -6,7 +6,7 @@ import { useResize } from '../utils/hooks/useResize';
 const ToyProjects = ({offsetTopToyProjects}) => {
     const toyProjectsSection = useRef(null);
     const {resize} = useResize();
-    useEffect(()=>{
+    useEffect(() => {
         offsetTopToyProjects(toyProjectsSection.current.offsetTop);
     }, [resize]);
     return (

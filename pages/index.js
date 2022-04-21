@@ -19,22 +19,16 @@ const Home = () => {
         window.scrollTo(
             {
                 top: scrollTopValue[index],
-                behavior: "smooth"
+                behavior: 'smooth'
             }
         )
     };
 
-    function offsetTopAbout (offsetTop) {
-        setAboutOffsetTopValue(offsetTop);
-    };
+    const offsetTopAbout = (offsetTop) => setAboutOffsetTopValue(offsetTop);
 
-    function offsetTopWorks (offsetTop) {
-        setWorksOffsetTopValue(offsetTop);
-    };
+    const offsetTopWorks = (offsetTop) => setWorksOffsetTopValue(offsetTop);
 
-    function offsetTopToyProjects (offsetTop) {
-        setToyProjectsOffsetTopValue(offsetTop);
-    };
+    const offsetTopToyProjects = (offsetTop) => setToyProjectsOffsetTopValue(offsetTop);
 
     useEffect(() => {
         if (scrollY < aboutOffsetTopValue) {

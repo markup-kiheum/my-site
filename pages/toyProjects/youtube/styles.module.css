@@ -1,0 +1,17 @@
+.section {
+    display: flex;
+  }
+  
+  .detail {
+    flex: 1 1 60%;
+  }
+  
+  .list {
+    flex: 1 1 40%;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .section {
+      flex-direction: column;
+    }
+  }

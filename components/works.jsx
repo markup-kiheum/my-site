@@ -8,7 +8,7 @@ const Works = ({offsetTopWorks}) => {
     const {title} = workData || {};
     const worksSection = useRef(null);
     const {resize} = useResize();
-    useEffect(()=>{
+    useEffect(() => {
         offsetTopWorks(worksSection.current.offsetTop);
     }, [resize]);
     return (

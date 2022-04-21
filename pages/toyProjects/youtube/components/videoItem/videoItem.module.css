@@ -1,0 +1,44 @@
+.item {
+  padding: 6px;
+}
+
+.item.list {
+  width: 100%;
+}
+
+.item.grid {
+  width: 50%;
+}
+
+.video {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.thumbnail {
+  width: 40%;
+  height: 100%;
+}
+
+.info {
+  padding-left: 12px;
+}
+
+.title {
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.channel {
+  padding-top: 8px;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+@media screen and (max-width: 768px) {
+  .item.grid {
+    width: 100%;
+  }
+}

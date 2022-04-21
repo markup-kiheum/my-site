@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
 import styles from './header.module.css';
 
 const Header = ({ headerActiveIndex, onClickNavHandler }) => {
     const [clickActive, setClickActive] = useState(false);
     const [scrollPosition, setScrollPosition] = useState(false);
-    const navMenuList = ["Home", "About", "Works", "ToyProjects"];
-    const ACTIVE_CLASS = clickActive ? styles.active : "";
-    const FIXED_CLASS = scrollPosition ? styles.fixed : "";
+    const navMenuList = ['Home', 'About', 'Works', 'ToyProjects'];
+    const ACTIVE_CLASS = clickActive ? styles.active : '';
+    const FIXED_CLASS = scrollPosition ? styles.fixed : '';
     const handleFold = event => {
         event.preventDefault();
         setClickActive((current) => !current);
@@ -23,14 +22,14 @@ const Header = ({ headerActiveIndex, onClickNavHandler }) => {
             }
         };
 
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener('scroll', handleScroll);
         }
     }, [scrollPosition]);
 
-    function onClickNav(e){
-        const target = e.target.innerHTML;
+    const onClickNav = (event) => {
+        const target = event.target.innerHTML;
         const targetIndex = navMenuList.indexOf(target); 
         onClickNavHandler(targetIndex);
     };
@@ -38,7 +37,7 @@ const Header = ({ headerActiveIndex, onClickNavHandler }) => {
     const renderNavList = () => {
         return (
             navMenuList.map((item, index) => {
-                const navActiveClass = (headerActiveIndex === index) ? styles.active : "";
+                const navActiveClass = (headerActiveIndex === index) ? styles.active : '';
                 return (
                     <button key={`nav_${index}`} onClick={onClickNav} className={`${styles.menu} ${navActiveClass}`}>{item}</button>
                 )
