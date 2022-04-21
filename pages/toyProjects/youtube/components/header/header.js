@@ -1,4 +1,4 @@
-import { useRef, memo, useState } from 'react';
+import { useRef, memo } from 'react';
 import styles from './header.module.css';
 
 const Header = memo(
