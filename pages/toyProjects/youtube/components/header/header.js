@@ -19,6 +19,8 @@ const Header = memo(
                 handleSearch();
             }
         };
+
+        inputRef.displayName = 'inputRef';
         
         return (
             <header className={styles.header}>
