@@ -24,6 +24,7 @@
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.2.7",
     "eslint": "8.11.0",
-    "eslint-config-next": "12.1.0"
+    "eslint-config-next": "12.1.0",
+    "serverless-dotenv-plugin": "^4.0.0"
   }
 }
